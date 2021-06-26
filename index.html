@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/clock.css">
+    <title>Relógio & Cronômetro</title>
+</head>
+<body>
+    <div id="clockArea">
+        <h1 id="title">Relógio Digital</h1>
+        <h1 id="clock"></h1>
+        <h3 id="utcOffset"></h3>
+    </div>
+    <div id="timerArea">
+        <h1 id="title">Cronômetro</h1>
+        <h1 id="timer">00:00:00</h1>
+        <div id="buttons">
+            <button id="startButton" onclick="startTimer()">Iniciar</button>
+            <button id="stopButton" onclick="stopTimer()">Parar</button>
+            <button id="restartButton" onclick="restartTimer()">Resetar</button>
+        </div>
+    </div>
+
+    <script src="./js/clock.js"></script>
+</body>
+</html>
