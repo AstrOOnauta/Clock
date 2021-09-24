@@ -1,53 +1,70 @@
 body{
-    background-color: #6b5b95;
+    background-color: #fbb034;
     background-attachment: fixed;
-    font-family: monospace;
+    font-family: sans-serif;
     text-align: center;
     padding: 0;
     margin: 0;
 }
 
-#clockArea{
-    position: relative;
-    background-color: rgb(0, 0, 0, 0.4);
-    border-radius: 2%;
-    min-height: 280px;
-    box-shadow: 0px 0px 15px 1px rgba(0,0,0,0.8);
-    margin: auto;
-    margin-top: 20px;
-    width: 350px;
+header{
+    background-color: #303030;
+    width: 100%;
+    height: 10vh;
 }
 
-#timerArea{
-    position: relative;
-    background-color: rgb(0, 0, 0, 0.4);
-    border-radius: 2%;
-    min-height: 280px;
-    box-shadow: 0px 0px 15px 1px rgba(0,0,0,0.8);
+#headerArea{
+    width: 90%;
     margin: auto;
-    margin-top: 30px;
-    width: 350px;
+    text-align: left;
+    line-height: 10vh;
+    font-size: xx-large;
 }
+
+#headerArea a{
+    font-weight: 600;
+}
+
+#headerArea i{
+    color: #fbb034;
+    font-size: 3rem;
+    padding-top: .4rem;
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 80vh;
+}
+
+#clockArea, #timerArea{
+    position: relative;
+    background-color: #303030;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 1rem;
+    box-shadow: 0px 0px 15px 1px rgba(0,0,0,0.8);
+    margin:auto;
+    width: 90%;
+    height: 35vh;
+}
+
 h3{
     position: absolute;
-    margin-top: 10px;
-    padding-top: 10px;
     opacity: .9;
-    top: 70%;
+    bottom: 0;
     left: 50%;
     transform: translate(-50%);
     width: 100%;
-    height: 30px;
-    background-color: rgba(0,0,0,0.6);
-    color: #0f0;
+    color: #fbb034;
 }
 #title{
     position: absolute;
     padding-top: 20px;
     width: 100%;
     height: 50px;
-    background-color: rgba(0,0,0,0.6);
-    color: white;
+    color: #fbb034;
 }
 #clock, #timer{
     position: absolute;
@@ -56,32 +73,74 @@ h3{
     top: 40%;
     left: 50%;
     transform: translate(-50%);
-    width: 170px;
-    font-family: "Orbitron";
-    background-color: black;
-    color: #0f0;
-    border: 10px ridge white;
+    width: 80%;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 400;
+    font-size: 6vmax;
+    color: #fbb034;
 }
 #buttons{
     position: absolute;
     padding-bottom: 10px;
     width: 100%;
     margin: auto;
-    top: 70%;
+    bottom: 1rem;
     left: 50%;
     transform: translate(-50%);
-    background-color: rgba(0,0,0,0.6);
 }
 button{
-    background-color: #0f0;
-    border:1px solid black;
-    font-family: monospace;
-    margin-top: 10px;
+    background-color: #fbb034;
+    border: none;
     border-radius: 10px;
-    padding:5px 10px;
+    padding: 1.5% 2rem;
+    font-size: 1.5vmax;
     cursor: pointer;
 }
 button:hover{
-    background:linear-gradient(to bottom, #5cbf2a 5%, #44c767 100%);
-	background-color:#5cbf2a;
+	background-color:#303030;
+    color: #fbb034;
+    box-shadow: 0px 0px 1px 1px #fbb034;
+}
+
+button:disabled{
+	background-color:#303030;
+    color: #fbb034;
+    box-shadow: 0px 0px 1px 1px #fbb034;
+    opacity: .5;
+    cursor: default;
+}
+
+button:focus{
+    outline: none;
+}
+
+footer{
+    background-color: #303030;
+    width: 100%;
+    height: 10vh;
+}
+
+p{
+    font-size: medium;
+    line-height: 10vh;
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+    color: #fbb034;
+}
+
+@media screen and (min-width: 1100px) {
+    #clockArea, #timerArea{
+        width: 40%;
+        height: 60vh;
+    }
+    #clock, #timer{
+        top: 35%;
+    }
+    h3, #buttons{
+        bottom: 10%;
+    }
 }

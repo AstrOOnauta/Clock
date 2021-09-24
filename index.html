@@ -4,25 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/clock.css">
     <title>Relógio & Cronômetro</title>
 </head>
 <body>
-    <div id="clockArea">
-        <h1 id="title">Relógio Digital</h1>
-        <h1 id="clock"></h1>
-        <h3 id="utcOffset"></h3>
-    </div>
-    <div id="timerArea">
-        <h1 id="title">Cronômetro</h1>
-        <h1 id="timer">00:00:00</h1>
-        <div id="buttons">
-            <button id="startButton" onclick="startTimer()">Iniciar</button>
-            <button id="stopButton" onclick="stopTimer()">Parar</button>
-            <button id="restartButton" onclick="restartTimer()">Resetar</button>
+    <header>
+        <div id="headerArea">
+            <i class="fas fa-meteor"></i>
+            <a href="https://github.com/AstrOOnauta">AstrOOnauta</a>
         </div>
-    </div>
+    </header>
+    <main>
+        <div id="clockArea">
+            <h1 id="title">Relógio Digital</h1>
+            <h1 id="clock"></h1>
+            <h3 id="utcOffset"></h3>
+        </div>
+        <div id="timerArea">
+            <h1 id="title">Cronômetro</h1>
+            <h1 id="timer">00:00:00</h1>
+            <div id="buttons">
+                <button id="startButton" onclick="startTimer()">Iniciar</button>
+                <button id="stopButton" onclick="stopTimer()">Parar</button>
+                <button id="restartButton" onclick="restartTimer()">Resetar</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Desenvolvido por <a href="https://github.com/AstrOOnauta">AstrOOnauta</a></p>
+    </footer>
 
+    <script src="https://kit.fontawesome.com/d5ca61eae2.js" crossorigin="anonymous"></script>
     <script src="./js/clock.js"></script>
 </body>
 </html>

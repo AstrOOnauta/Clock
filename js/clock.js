@@ -44,11 +44,13 @@ var aux
 //Function to start the timer
 function startTimer(){
     aux = setInterval(function(){timer()}, time)    //Call the mechanism to timer to work each 1second
+    document.getElementById("startButton").disabled = true
 }
 
 //Function to stop the timer
 function stopTimer(){
     clearInterval(aux)
+    document.getElementById("startButton").disabled = false
 }
 
 //Function to restart the time in timer
@@ -58,6 +60,7 @@ function restartTimer(){
     minutesTimer = 0;
     secondsTimer = 0;
     document.getElementById("timer").innerHTML = "00:00:00"
+    document.getElementById("startButton").disabled = false
 }
 
 //Function to the timer mechanism
